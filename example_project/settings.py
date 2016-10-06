@@ -52,10 +52,9 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'django.core.context_processors.i18n',
-                'django.core.context_processors.media',
-                'django.core.context_processors.static',
-                'django.core.context_processors.request',
+                'django.template.context_processors.i18n',
+                'django.template.context_processors.media',
+                'django.template.context_processors.static',
             ],
         },
     },
@@ -160,5 +159,3 @@ if len(sys.argv) > 1 and sys.argv[1] == 'test':
     LOGGING['loggers']['']['handlers'] = ['null']
     LOGGING['loggers']['photologue']['handlers'] = ['null']
 
-# Uncomment this for Amazon S3 file storage
-# from example_storages.settings_s3boto import *
