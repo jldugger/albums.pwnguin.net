@@ -1,4 +1,4 @@
-# Global settings for photologue example project.
+# Global settings for photologue standalone app
 
 import os
 import sys
@@ -26,7 +26,7 @@ INSTALLED_APPS = (
     'django.contrib.sitemaps',
     'photologue',
     'sortedm2m',
-    'example_project',
+    'album_project',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -39,12 +39,12 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'example_project.urls'
+ROOT_URLCONF = 'album_project.urls'
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'example_project/templates'), ],
+        'DIRS': [os.path.join(BASE_DIR, 'album_project/templates'), ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -60,7 +60,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'example_project.wsgi.application'
+WSGI_APPLICATION = 'album_project.wsgi.application'
 
 
 # Database
@@ -98,7 +98,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'public', 'media')
 MEDIA_URL = '/media/'
 
 STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'example_project/static'),
+    os.path.join(BASE_DIR, 'album_project/static'),
 )
 
 SITE_ID = 1
