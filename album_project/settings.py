@@ -6,9 +6,11 @@ import sys
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
-SECRET_KEY = '=_v6sfp8u2uuhdncdz9t1_nu8(#8q4=40$f$4rorj4q3)f-nlc'
-
-DEBUG = True
+try:
+    from local_settings import *
+except ImportError:
+    SECRET_KEY = '=_v6sfp8u2uuhdncdz9t1_nu8(#8q4=40$f$4rorj4q3)f-nlc'
+    DEBUG = True
 
 ALLOWED_HOSTS = []
 
