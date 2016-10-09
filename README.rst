@@ -17,7 +17,7 @@ The rest of the README will assume that you want to set up the test project in
 order to work on django-photologue itself.
 
 Prerequisites
-=============
+=============:
 
 - python (either 3.7, or 3.x).
 - virtualenvwrapper makes it easy to manage your virtualenvs. Strongly recommended!
@@ -72,7 +72,8 @@ Open browser to http://127.0.0.1:8000
 
 Thank you
 =========
-This example project is based on the earlier `photologue_demo project <https://github.com/richardbarran/photologue_demo>`_.
+This project is based on the upstream django-photologue example project, which is
+in turn based on the earlier `photologue_demo project <https://github.com/richardbarran/photologue_demo>`_.
 This project included contributions and input from: crainbf, tomkingston, bmcorser.
 
 
