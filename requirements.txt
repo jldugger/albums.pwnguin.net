@@ -4,3 +4,4 @@ django-sortedm2m>=1.1.1
 ExifRead>=2.1.2
 pytz>=2013.9
 django-photologue>=3.6
+django-debug-toolbar>=1.6
