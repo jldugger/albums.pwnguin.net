@@ -1,7 +1,6 @@
 # lifted wholesale from http://stackoverflow.com/a/1433970/9947
 
 from django.conf import settings
-from django.template.loader import render_to_string
 
 
 def analytics(request):
