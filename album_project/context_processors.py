@@ -10,3 +10,5 @@ def analytics(request):
     """
     if not settings.DEBUG:
         return {'google_analytics_key': settings.GOOGLE_ANALYTICS_KEY}
+    else:
+        return {}
