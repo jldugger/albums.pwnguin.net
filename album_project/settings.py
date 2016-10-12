@@ -153,6 +153,12 @@ if len(sys.argv) > 1 and sys.argv[1] == 'test':
     LOGGING['loggers']['photologue']['handlers'] = ['null']
 
 try:
+    from .raven import *
+    INSTALLED_APPS = update_installed(INSTALLED_APPS)
+except ImportError:
+    pass
+
+try:
     from local_settings import *
 except ImportError:
     pass
