@@ -6,18 +6,15 @@ import sys
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
-try:
-    from local_settings import *
-except ImportError:
-    ALLOWED_HOSTS = []
-    SECRET_KEY = '=_v6sfp8u2uuhdncdz9t1_nu8(#8q4=40$f$4rorj4q3)f-nlc'
-    DEBUG = True
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        }
+ALLOWED_HOSTS = []
+SECRET_KEY = '=_v6sfp8u2uuhdncdz9t1_nu8(#8q4=40$f$4rorj4q3)f-nlc'
+DEBUG = True
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
+}
 
 
 INSTALLED_APPS = (
@@ -154,3 +151,8 @@ LOGGING = {
 if len(sys.argv) > 1 and sys.argv[1] == 'test':
     LOGGING['loggers']['']['handlers'] = ['null']
     LOGGING['loggers']['photologue']['handlers'] = ['null']
+
+try:
+    from local_settings import *
+except ImportError:
+    pass
