@@ -1,3 +1,5 @@
+import raven
+
 def update_installed(apps):
     return apps + ('raven.contrib.django.raven_compat',)
 
