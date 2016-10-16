@@ -17,6 +17,7 @@ DATABASES = {
 
 
 INSTALLED_APPS = (
+    'raven.contrib.django.raven_compat',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -154,7 +155,6 @@ if len(sys.argv) > 1 and sys.argv[1] == 'test':
 
 try:
     from .raven import *
-    INSTALLED_APPS = update_installed(INSTALLED_APPS)
 except ImportError:
     pass
 
