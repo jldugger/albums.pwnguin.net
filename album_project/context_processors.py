@@ -8,7 +8,7 @@ def adsense(request):
    Returns the Adsense parameters
    """
    if not settings.DEBUG:
-      return {'google_adwords_client': settings.GOOGLE_ADWORDS_CLIENT }
+      return {'google_adsense_id': settings.GOOGLE_ADSENSE_ID }
    else:
       return {}
 
