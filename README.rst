@@ -4,61 +4,37 @@ Photologue Demo Project
 
 About
 =====
-This project serves 3 purposes:
 
-- It's a quick demo of django-photologue for people who wish to try it out.
-- It's an easy way for contributors to the project to have both django-photologue,
-  and a project that uses it.
-- It's used for Travis CI testing of django-photologue.
-
-It uses the Bootstrap-friendly templates that are supplied in contrib/bootstrap/templates.
-
-The rest of the README will assume that you want to set up the test project in 
-order to work on django-photologue itself.
+This project is intended to be a standalone production deployable app for
+django-photologue.
 
 Prerequisites
 =============:
 
 - python (either 3.7, or 3.x).
-- virtualenvwrapper makes it easy to manage your virtualenvs. Strongly recommended!
+- virtualenv strongly commended!
 
-Installation
-============
+Development Setup
+=================
 **Note**: the project is configured so that it can run immediately with zero configuration
 (especially of settings files).
 
-Create a virtual python environment for the project. The use of virtualenvwrapper
-is strongly recommended::
-
-	mkproject --no-site-packages django-photologue
-	or for more sophisticated setups:
-	mkvirtualenv --no-site-packages django-photologue
-
-
 Clone this code into your project folder::
 
-	(cd to the new virtualenv)
-	git clone https://github.com/jdriscoll/django-photologue.git .
+	git clone https://github.com/jldugger/albums.pwnguin.net
 
-**Note**: if you plan to contribute code back to django-photologue, then you'll
-probably want instead to fork the project on Github, and clone your fork instead.
+Set up a virtualenv
+        cd albums.pwnguin.net
+        virtualenv --no-site-packages venv
 
-Install requirements::
-
-	cd example_project
+Activate venv and Install dependencies::
+        source venv/bin/activate
 	pip install -r requirements.txt
-
-**Note**: this will install Pillow, which is not always straightforward; sometimes it
-will install smoothly out of the box, sometimes you can spend hours figuring it out - installation
-issues vary from platform to platform, and from one OS release to the next. Google
-is your friend here, and it's worth noting that Pillow is a fork of PIL,
-so googling 'PIL installation <your platform>' can also help.
 
 The project is set up to run SQLite in dev so that it can be quickly started
 with no configuration required (you can of course specify another database in
 the settings file). To setup the database::
 
-	./manage.py syncdb
 	./manage.py migrate
 
 Follow the instructions to configure photologue here: `Photologue Docs <http://django-photologue.readthedocs.org/en/latest/pages/installation.html>`_
@@ -70,13 +46,30 @@ environment)::
 
 Open browser to http://127.0.0.1:8000
 
+Production Setup
+================
+
+WORK IN PROGRESS
+
+You probably want to set up Apache `mod_wsgi`, or `uwsgi` and Nginx.
+
+Settings
+--------
+
+`album_project/settings.py` defaults to a ready to run env for production. You shuld override
+any settings -- DATABASES, SECRET_KEY, DEBUG, etc., -- by adding writing them to a
+`album_project/local_settings.py`.
+
+This project also supports a number of additional settings you can optionally define to add
+functionality.
+
+`GOOGLE_ANALTYICS_KEY`: unique ID embedded in the GA script to direct vistor data to your acct
+
+`RAVEN_CONFIG`: unique ID to push uncaught exceptions to a Sentry logging server for recording
+and alerting.
+
 Thank you
 =========
 This project is based on the upstream django-photologue example project, which is
 in turn based on the earlier `photologue_demo project <https://github.com/richardbarran/photologue_demo>`_.
 This project included contributions and input from: crainbf, tomkingston, bmcorser.
-
-
-.. 
-	Note: this README is formatted as reStructuredText so that it's in the same
-	format as the Sphinx docs. 
