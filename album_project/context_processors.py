@@ -3,6 +3,16 @@
 from django.conf import settings
 
 
+def adsense(request):
+   """
+   Returns the Adsense parameters
+   """
+   if not settings.DEBUG:
+      return {'google_adwords_client': settings.GOOGLE_ADWORDS_CLIENT }
+   else:
+      return {}
+
+
 def analytics(request):
     """
     Returns analytics code.

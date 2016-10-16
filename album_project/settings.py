@@ -5,7 +5,6 @@ import sys
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-
 ALLOWED_HOSTS = []
 SECRET_KEY = '=_v6sfp8u2uuhdncdz9t1_nu8(#8q4=40$f$4rorj4q3)f-nlc'
 DEBUG = True
@@ -59,7 +58,8 @@ TEMPLATES = [
                 'django.template.context_processors.i18n',
                 'django.template.context_processors.media',
                 'django.template.context_processors.static',
-                'album_project.context_processors.analytics'
+                'album_project.context_processors.analytics',
+                'album_project.context_processors.adsense',
             ],
         },
     },

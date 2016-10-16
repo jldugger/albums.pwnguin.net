@@ -65,6 +65,8 @@ functionality.
 
 `GOOGLE_ANALTYICS_KEY`: unique ID embedded in the GA script to direct vistor data to your acct
 
+`GOOGLE_ADWORDS_KEY`: unique ID for adsense account
+
 `RAVEN_CONFIG`: unique ID to push uncaught exceptions to a Sentry logging server for recording
 and alerting.
 
