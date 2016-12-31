@@ -4,3 +4,5 @@ db.sqlite3
 **/raven.py
 public/static/*
 venv/*
+.venv/*
+.env/*
