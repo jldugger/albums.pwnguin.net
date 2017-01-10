@@ -6,3 +6,4 @@ pytz>=2013.9
 django-photologue>=3.6
 django-debug-toolbar>=1.6
 raven>=5.27.1 # error log reporting
+psycopg2>=2.6.2
