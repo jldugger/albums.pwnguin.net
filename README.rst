@@ -9,7 +9,7 @@ This project is intended to be a standalone production deployable app for
 django-photologue.
 
 Prerequisites
-=============:
+=============
 
 - python (either 3.7, or 3.x).
 - virtualenv strongly commended!
