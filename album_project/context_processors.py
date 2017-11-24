@@ -4,13 +4,13 @@ from django.conf import settings
 
 
 def adsense(request):
-   """
-   Returns the Adsense parameters
-   """
-   if not settings.DEBUG:
-      return {'google_adsense_id': settings.GOOGLE_ADSENSE_ID }
-   else:
-      return {}
+    """
+    Returns the Adsense parameters
+    """
+    if not settings.DEBUG:
+        return {'google_adsense_id': settings.GOOGLE_ADSENSE_ID}
+    else:
+        return {}
 
 
 def analytics(request):
